@@ -1,0 +1,44 @@
+name: Testing request / test result
+description: Suggest a mechanic to test, or report the result of an in-game test
+labels: ["testing"]
+body:
+  - type: input
+    id: build
+    attributes:
+      label: Build number
+      description: Find it on the login screen or in the client (e.g. 1.60.1.70170). Results without a build can't be used.
+      placeholder: 1.60.1.70170
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Elemental
+        - Enhancement
+        - Restoration
+        - Totems
+        - Weapon imbues
+        - Racials
+        - Items / sets
+        - General / stats
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or mechanic
+      description: What should be tested? Link the wiki page or Testing Queue item if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Method & result (if you tested it)
+      description: Target (dummy, mob level), sample size, talents, gear/spell power, combat log or video link.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Screenshots, videos, forum threads, datamined values.

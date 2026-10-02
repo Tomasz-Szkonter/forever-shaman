@@ -1,0 +1,35 @@
+name: Correction
+description: Something on a wiki page is wrong or outdated
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: wiki/mechanics/Totem-Mechanics.md
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's wrong
+      description: Quote the current text.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Build number (if game data)
+      placeholder: 1.60.1.70170
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source / evidence
+    validations:
+      required: true
